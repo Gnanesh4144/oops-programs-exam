@@ -1,22 +1,31 @@
 #include<iostream>
 using namespace std;
 
+class student
+{
+  public:
+    int fees,accno;
+    void get_student(int a,int b)
+    {
+      fees = a;
+      accno = b;
+    }
+};
+
+class bank: public student
+{
+  public:
+    void print_bank()
+    {
+      int paid=fees;
+      cout<<"acc_no:"<<accno<<"\npaid_fees: "<<paid<<"\nfees: "<<fees;
+    }
+};
+
 int main()
 {
-  int k=0;
-  cout<<"Enter Rows:";
-  cin>>k;
-  for(int i =k;i>=0;i--)
-  {
-    int s = k-i;
-    for(int a=s;a>0;a--)
-    {
-      cout<<"  ";
-    }
-    for(int j=i;j>0;j--)
-    {
-      cout<<"* ";
-    }
-    cout<<endl;
-  }
+  student obj;
+  bank obj2;
+  obj2.get_student(1,2);
+  obj2.print_bank();
 }

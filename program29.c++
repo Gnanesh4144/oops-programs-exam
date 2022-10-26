@@ -1,12 +1,30 @@
 #include<iostream>
 using namespace std;
 
+class student
+{
+  public:
+    int num,marks;
+    void read(int a, int b)
+    {
+      num = a;
+      marks = b;
+    }
+};
+
+class student1:public student
+{
+  public:
+    void print()
+    {
+      cout<<num<<","<<marks<<endl;
+    }
+};
+
+
 int main()
 {
-  int i,j;
-  for (i=0,j=0;i<5,j<10;i++,j++)
-  {
-    cout<<"i:"<<i<<endl;
-    cout<<"j:"<<j<<endl;
-  }
+  student1 obj1;
+  obj1.read(2,3);
+  obj1.print();
 }

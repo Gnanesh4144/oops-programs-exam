@@ -1,21 +1,11 @@
 #include<iostream>
 using namespace std;
-
 int main()
 {
-  int total,staff,n,sum;
-  cout<<"Total users: ";
-  cin>>total;
-  cout<<"Staff users: ";
-  cin>>staff;
-  n= staff/3;
-  sum = total-staff-n;
-  if(sum>=0)
-  {
-  cout<<"Student users: "<<sum;
-  }
-  else
-  {
-    cout<<"Invalid";
-  }
+  int num , n ;
+  cout << "Enter the number: " ;
+  cin >> num ;
+  cout << "Enter the bit number: " ;
+  cin >> n ;
+  cout << "Answer:\n" << (1 &(num >> (n-1)));
 }

@@ -1,21 +1,20 @@
 #include<iostream>
 using namespace std;
-
-void rev(int a)
+class animal
 {
-  int q=0,s=0;
-  while (a!=0)
-  {
-    q=a%10;
-    s = s*10+q;
-    a/=10;
-  }
-  cout<<"reverse of given number: "<<s;
-}
+  public:
+    animal(float a, float b, float c, float d)
+    {
+      cout << "Cage_no: " << b << endl;
+      cout << "Height: " << c << endl;
+      cout << "Weight: " << d << endl;
+      cout << "Pass_value: " << a << endl;
+      cout << "\n\n" << endl;
+    }
+};
 
 int main()
 {
-  int s;
-  cin>>s;
-  rev(s);
+  animal obj(2.3,1,50,50);
+  animal obj1(2.5,2,60,40);
 }

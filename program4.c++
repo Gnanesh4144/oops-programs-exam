@@ -1,15 +1,27 @@
 #include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 
 int main()
 {
-  int a=10,b=5;
-  if (a>b)
+  int n,mx,mx_no=0;
+  cout << "Enter the size: ";
+  cin >> n;
+  int arr[n];
+
+  for (int i=0 ; i<n ; i++)
   {
-    cout<<"a is greater";
+    cin >> arr[i];
   }
-  else if (b>a)
+  for (int i=0 ; i<n ; i++)
   {
-    cout<<"b is greater";
+    int s = count(arr,arr+n,arr[i]);
+    if( mx_no < s)
+    {
+      mx = arr[i];
+      mx_no = s;
+    }
   }
+  cout <<"Element: "<< mx<<endl;
+  cout << "no of repetition: "<< mx_no<<endl;
 }

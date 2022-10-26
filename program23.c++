@@ -1,47 +1,37 @@
 #include<iostream>
 using namespace std;
 
-class base
+class college
 {
   public:
-    base()
-    {
-      cout<<"A"<<endl;
-    }
+    college()
+    { cout << "a: "<< 10 << endl;}
 };
 
-class derived1: public base
+class sem: public college
 {
   public:
-    derived1()
-    {
-      cout<<"B"<<endl;
-    }
+    sem()
+    { cout<< "b: " << 15 << endl;}
 };
 
-class derived2: public base
+class marks: public college
 {
   public:
-    derived2()
-    {
-      cout<<"C"<<endl;
-    }
-};
+    marks()
+    { cout << "c: "<< 20 <<endl;}
+};   
 
-class derived3: public base
+class extracurricular: public college
 {
   public:
-    derived3()
-    {
-      cout<<"D"<<endl;
-    }
+    extracurricular()
+    { cout << "D: "<< 25<<endl;}
 };
 
 int main()
 {
-  derived1 obj1;
-  cout<<endl;
-  derived2 obj2;
-  cout<<endl;
-  derived3 obj3;
+  sem obj;
+  marks obj1;
+  extracurricular obj2;
 }

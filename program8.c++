@@ -2,14 +2,10 @@
 using namespace std;
 int main()
 {
-  int a,b,c;
+  int n;
+  cout << "Enter Celsius: ";
+  cin >> n;
+  int c = ((n*9)/5)+32;
 
-  cout<<"Provide value of a:";
-  cin>>a;
-
-  cout<<"Provide value of b:";
-  cin>>b;
-  
-  c = a+b;
-  cout<<c;
+  cout << "Fahrenheit: " << c;
 }

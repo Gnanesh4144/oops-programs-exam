@@ -1,23 +1,34 @@
 #include<iostream>
 using namespace std;
 
-class a
+void Area(int r)
 {
-  public:
-    a(int c,int b)
-    {
-      cout<<c<<endl<<b<<endl<<"1st constructor"<<endl;
-    };
-    a(int a)
-    {
-      cout<<a<<endl<<"2nd constructor"<<endl;
-    };
-};
+  int area = 3.14f * r * r;
+  cout << "Area of circle:" <<area<<endl;
+}
 
+void Area(int b,int h)
+{
+  int area = 0.5f * b * h;
+  cout << "Area of triangle:" <<area<<endl;
+}
+
+void Area(float a)
+{
+  float area = a * a;
+  cout << "Area of square:" <<area<<endl;
+}
+
+void Area(float l, float b)
+{
+  float area = l * b;
+  cout << "Area of rectangle:" <<area<<endl;
+}
 
 int main()
 {
-  a obj(20,30);
-  a obj1(20);
-
+  Area(1,2);
+  Area(1);
+  Area(1.2f,2.2f);
+  Area(2.2f);
 }

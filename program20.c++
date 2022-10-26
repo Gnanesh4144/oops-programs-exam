@@ -1,27 +1,21 @@
 #include<iostream>
 using namespace std;
 
-class base
+class college
 {
   public:
-    void a()
-    {
-      cout<<"A"<<endl;
-    }
+    college()
+    { cout << "a: "<< 10 << endl;}
 };
 
-class derived : public base
+class sem: public college
 {
   public:
-    void b()
-    {
-      cout<<"B"<<endl;
-    }
+    sem()
+    { cout<< "b: " << 15 << endl;}
 };
 
 int main()
 {
-  derived obj;
-  obj.a();
-  obj.b();
+  sem obj;
 }

@@ -1,21 +1,46 @@
 #include<iostream>
 using namespace std;
 
-void rev(int a)
+class calculator
 {
-  int q=0,s=0;
-  while (a!=0)
-  {
-    q=a%10;
-    s = s*10+q;
-    a/=10;
-  }
-  cout<<"reverse of given number: "<<s;
-}
+  public:
+    calculator(int d,int e)
+    {
+        cout << d <<" + " << e << " : " << d+e<<endl;
+    }
+    calculator(int d,float e)
+    {
+        cout << d <<" - " << e << " : " << d-e<<endl;
+    }
+    calculator(float d,int e)
+    {
+        cout << d <<" * " << e << " : " << d*e<<endl;
+    }
+    calculator(float d,float e)
+    {
+      cout << d <<" / " << e << " : " << d/e<<endl;
+    }
+};
 
 int main()
 {
-  int s;
-  cin>>s;
-  rev(s);
+  calculator obj(float(1),float(2));
 }
+      // switch(c)
+      // {
+      //   case '+':
+      //     cout << a <<" + " << b << " : " << a+b<<endl;
+      //     break;
+      //   case '-':
+      //     cout << a <<" - " << b << " : " << a-b<<endl;
+      //     break;
+      //   case '*':
+      //     cout << a <<" * " << b << " : " << a*b<<endl;
+      //     break;
+      //   case '/':
+      //     cout << a <<" / " << b << " : " << a/b<<endl;
+      //     break;
+      //   default:
+      //     cout << "Invalid Choice(only +,-,*,/)";
+      //     break;
+      // }

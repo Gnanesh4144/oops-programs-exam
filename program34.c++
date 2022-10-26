@@ -1,40 +1,17 @@
 #include<iostream>
 using namespace std;
 
+class student
+{
+  public:
+    student(string s = "Unknown")
+    {
+      cout << "Name: " << s << endl;
+    }
+};
+
 int main()
 {
-  int i,j,k,r,c;
-  cin>>r;
-  cin>>c;
-  for (i=0;i<=r;i++)
-  {
-    for(j=0;j<c;j++)
-    {
-      if(i==0||i==r)
-      {
-        for(j=0;j<=c;j++)
-        {
-          cout<<"*";
-        }  
-
-      }
-      else
-      {
-        for(j=0;j<=c;j++)
-        {
-          if (j==0 || j==c)
-          {
-            cout<<"*";
-          }
-          else
-          {
-            cout<<" ";
-          }
-        }
-        
-      }
-      
-    }
-      cout<<endl;
-  }
+  student obj;
+  student obj1("Sam");
 }

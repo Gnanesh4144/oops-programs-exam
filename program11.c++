@@ -1,12 +1,16 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
+void ch(int &a)
+{
+  a+=5;
+  cout<<a<<endl;
+}
+
 int main()
 {
-  int i=0;
-  while(i<=7)
-  {
-    cout<<i<<endl;
-    i++;
-  }
-  return 0;
+  int a=5;
+  cout<<a<<endl;
+  ch(a);
+  cout<<a<<endl;
+
 }

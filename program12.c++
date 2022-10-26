@@ -1,13 +1,15 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
+
+inline int cube(int a)
+{
+  return a*a*a;
+}
+
 int main()
 {
-  int i=0;
-  do
-  {
-    cout<<i<<endl;
-    i++;
-  }
-  while(i<=7);
-  return 0;
+  int a;
+  cout << "Enter the value:";
+  cin >> a;
+  cout << "cube of "<<a<<" is "<<cube(a)<<endl; 
 }

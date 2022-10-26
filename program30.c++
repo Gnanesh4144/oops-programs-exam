@@ -1,26 +1,40 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
+
+class number
+{
+  public:
+    int a;
+    void read(int d)
+    {
+      a = d;
+    }
+};
+
+class square: public number
+{
+  public:
+    void print()
+    {
+      cout << a*a<<endl;
+    }
+};
+
+class cube: public number
+{
+  public:
+    void print()
+    {
+      cout << a*a*a<<endl;
+    }
+};
 
 int main()
 {
-    int space, rows;
-
-    cout <<"Enter number of rows: ";
-    cin >> rows;
-
-    for(int i = 1, k = 0; i <= rows; ++i, k = 0)
-    {
-        for(space = 1; space <= rows-i; ++space)
-        {
-            cout <<"  ";
-        }
-
-        while(k != 2*i-1)
-        {
-            cout << "* ";
-            ++k;
-        }
-        cout << endl;
-    }    
-    return 0;
+  square obj;
+  cube obj2;
+  obj.read(2);
+  obj.print();
+  obj2.read(2);
+  obj2.print();
 }

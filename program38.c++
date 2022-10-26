@@ -1,20 +1,28 @@
 #include<iostream>
 using namespace std;
-
 int main()
 {
-  int m=12,n=24,gcd,lcm,d=1;
-
-  while(d<1000)
+  int n , n1=0 , n2=1 , count=0 ;
+  cout << "Enter number: " ;
+  cin >> n ;
+  if(n <= 0)
   {
-    if (d%n==0 && d%m==0)
-    {
-      gcd=d;
-      break;
-    }
-    d++;
+    cout << "Enter positive number" << endl ;
   }
-  lcm=(m*n)/gcd;
-  cout<<"GCD: "<<gcd<<endl;
-  cout<<"LCM: "<<lcm<<endl;
+  else if (n == 1)
+  {
+    cout << "fibonacci series upto " << n << " : " << n1 << endl ;
+  }
+  else
+  {
+    cout << "Fibonacci series upto " << n << " : \n";
+    while (count < n)
+    {
+      cout << n1 << " " ;
+      int nth = n1 + n2 ;
+      n1 = n2 ;
+      n2 = nth ;
+      count++;
+    }
+  }
 }

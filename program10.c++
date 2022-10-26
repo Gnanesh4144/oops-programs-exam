@@ -1,11 +1,16 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
+void ch(int a)
+{
+  a+=5;
+  cout<<a<<endl;
+}
+
 int main()
 {
-  int i;
-  for(i=0;i<=7;i++)
-  {
-    cout<<i<<endl;
-  }
-  return 0;
+  int a=5;
+  cout<<a<<endl;
+  ch(a);
+  cout<<a<<endl;
+
 }

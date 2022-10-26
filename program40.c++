@@ -1,45 +1,26 @@
 #include<iostream>
-using namespace std;
-int count=0;
-int pow(int i,int n)
-{
-  int s=1;
-  for(int j=1;j<=n;j++)
-  {
-    s*=i;
-  }
-  return s;
-}
-
-void bin_dec(int i)
-{
-  int r,s;
-  while(i!=0)
-  {
-    r=i%10;
-    s += r*pow(2,count);
-    count++;
-    i/=10;
-  }
-  count=0;
-  cout<<"decimal: "<<s<<endl;
-}
-
-void dec_bin(int n)
-{
-  int arr[100];
-  int i = 0;
-  while (n > 0) 
-  {
- 
-    arr[i] = n % 2;
-    n = n / 2;
-    i++;
-  }
-  for (int j = i - 1; j >= 0; j--)
-    cout << arr[j];
-}
+using namespace std ;
 int main()
 {
-  dec_bin(3);
+  int n = 6 ;
+  int arr[n] = {1,2,3,3,3,3,} , count[2] = {0 , 0} ;
+
+  for(int i = 0 ; i < n ; i++ )
+  {
+    int cnt = 0;
+    for(int j = 0 ; j < n ; j++ )
+    {
+      if (arr[i]==arr[j] && i!=j)
+      {
+        cnt++ ;
+      }
+    }
+    if(cnt > count[1]-1)
+    {
+      count[0] = arr[i] ;
+      count[1] = cnt+1 ;
+
+    }
+  }
+  cout << "Element: " << count[0] << "\n" << "Repettition: " << count[1] ;
 }

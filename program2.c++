@@ -1,18 +1,31 @@
 #include<iostream>
 using namespace std;
-
 int main()
 {
-  int a=10,b=10,c,d,e,f,g;
-  c = a+b;
-  d = a-b;
-  e = a*b;
-  f = a/b;
-  g = a%b;
-  cout<<"c="<<c<<"\n";
-  cout<<"d="<<d<<"\n";
-  cout<<"e="<<e<<"\n";
-  cout<<"f="<<f<<"\n";
-  cout<<"g="<<g<<"\n";
-  return 0;
+  int n,temp;
+  cout << "Enter the size: ";
+  cin >> n;
+  int arr[n];
+  for (int i = 0 ; i<n ; i++)
+  {
+    cout << "Enter element: ";
+    cin >> arr[i];
+  }
+
+
+  cout << "array of elements: ";
+  for(int i = 0 ; i<n ; i++)
+  {
+    cout<<arr[i];
+  }
+
+  temp = arr[0];
+  arr[0] = arr[n-1];
+  arr[n-1] = temp;
+  
+  cout << "array of elements(after switching): ";
+  for(int i = 0 ; i<n ; i++)
+  {
+    cout<<arr[i];
+  }
 }

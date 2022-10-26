@@ -1,30 +1,65 @@
 #include<iostream>
 using namespace std;
 
+class add
+{
+  public:
+    void addf(int a , int b , char c)
+    {
+      if (c == '+')
+      {
+        cout << a <<" + " << b << " : " << a+b<<endl;
+      }
+    }
+};
+class sub
+{
+  public:
+    void subf(int a , int b , char c)
+    {
+      if (c == '-')
+      {
+        cout << a <<" - " << b << " : " << a-b<<endl;
+      }
+    }
+};
+class mul
+{
+  public:
+    void mulf(int a , int b , char c)
+    {
+      if (c == '*')
+      {
+        cout << a <<" * " << b << " : " << a*b<<endl;
+      }
+    }
+};
+class div
+{
+  public:
+    void divf(int a , int b , char c)
+    {
+      if (c == '/')
+      {
+        cout << a <<" / " << b << " : " << a/b<<endl;
+      }
+    }
+};
+
+class calculator: public add, public sub, public mul, public div
+{
+  public:
+    calculator(int a , int b , char c)
+    {
+      addf(a,b,c);
+      subf(a,b,c);
+      mulf(a,b,c);
+      divf(a,b,c);
+    };
+    
+};
+
 int main()
 {
-  int arr[10],c,max,min;
-  cout<<"enter the no of inputs: ";
-  cin>>c;
-  for (int i = 0; i < c; i++)
-  {
-    cout<<"Enter "<<i+1<<" element: ";
-    cin>>arr[i];
-  }
-  for (int j = 0; j < c; j++)
-  {
-      if(max<arr[j])
-      {
-        max=arr[j];
-      }
-  }
-  for (int j = 0; j < c; j++)
-  {
-      if(min>arr[j])
-      {
-        min=arr[j];
-      }
-  }
-  cout<<max<<endl;
-  cout<<min<<endl;
+  calculator obj(5,2,'+');
 }
